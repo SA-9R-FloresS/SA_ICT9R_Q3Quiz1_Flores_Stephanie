@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- META ATTRIBUTES -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>JS Operators | Q3 Quiz 1</title>
+
+	<!-- BS5 SETUP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<!-- CSS SETUP -->
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+	<!-- JS SETUP -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container overflow-hidden my-5">
+		<h1 id="header" class="text-center animate__animated animate__bounceIn animate__slow">If <span style="color: var(--primary)">a = 20</span> and <span style="color: var(--primary)">b = 5</span>, compute for the following...</h1>
+		
+		<div class="row align-items-center justify-content-center mt-lg-5 mt-3 gx-5 gy-lg-0 gy-3 animate__animated animate__fadeIn animate__delay-1s">
+			<div class="col-lg-4 col-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="mac d-flex">
+							<div class="circle">
+								<span class="red box"></span>
+							</div>
+							<div class="circle">
+								<span class="yellow box"></span>
+							</div>
+							<div class="circle">
+								<span class="green box"></span>
+							</div>
+						</div>
+						<h1 class="h1 d-inline">Arithmetic Operators</h1>
+					</div>
+					<div class="card-body">
+						<ol>
+							<li id="exponent">Exponent</li>
+							<li id="modulus">Modulus</li>
+						</ol>
+					</div>
+					<div class="card-footer">
+						<button class="btn btn-dark" onclick="showArithmetic()">Show Answer</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="mac d-flex">
+							<div class="circle">
+								<span class="red box"></span>
+							</div>
+							<div class="circle">
+								<span class="yellow box"></span>
+							</div>
+							<div class="circle">
+								<span class="green box"></span>
+							</div>
+						</div>
+						<h1 class="h1 d-inline">Comparison Operators</h1>
+					</div>
+					<div class="card-body">
+						<ol>
+							<li id="greater">Is <i>a</i> greater than <i>b</i>?</li>
+							<li id="equal">Is <i>a</i> equal to <i>b</i>?</li>
+						</ol>
+					</div>
+					<div class="card-footer">
+						<button class="btn btn-dark" onclick="showComparison()">Show Answer</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="mac d-flex">
+							<div class="circle">
+								<span class="red box"></span>
+							</div>
+							<div class="circle">
+								<span class="yellow box"></span>
+							</div>
+							<div class="circle">
+								<span class="green box"></span>
+							</div>
+						</div>
+						<h1 class="h1 d-inline">Logical Operators</h1>
+					</div>
+					<div class="card-body">
+						<ol>
+							<li id="and">(a <= b) && (a >= b)</li>
+							<li id="or">(a != b) || (a == b)</li>
+						</ol>
+					</div>
+					<div class="card-footer">
+						<button class="btn btn-dark" onclick="showLogical()">Show Answer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h1 id="footer" class="text-center mb-lg-0 mb-5 animate__animated animate__fadeIn animate__delay-2s"><a href="https://github.com/SA-9R-FloresS">&copy; 2025 Flores S.</a></h1>
+
+	<script>
+		// given variables
+		const a = 20;
+		const b = 5;
+
+		// Arithmetic Operators
+		function showArithmetic() {
+			let expResult = a ** b;
+			let modResult = a % b;
+
+			// displays result without replacing previous text
+			document.getElementById('exponent').innerHTML = 'Exponent:' + ' ' + '<b style="color: var(--secondary)">' + expResult + '</b>';
+			document.getElementById('modulus').innerHTML = 'Modulus:' + ' ' + '<b style="color: var(--secondary)">' + modResult + '</b>';
+		}
+
+		// Comparison Operators
+		function showComparison() {
+			let greaterResult = a > b;
+			let equalResult = a == b;
+
+			// displays result without replacing previous text
+			document.getElementById('greater').innerHTML = 'Is <i>a</i> greater than <i>b</i>?' + ' ' + '<b style="color: var(--secondary)">' + greaterResult + '</b>';
+			document.getElementById('equal').innerHTML = 'Is <i>a</i> equal to <i>b</i>?' + ' ' + '<b style="color: var(--secondary)">' + equalResult + '</b>';
+		}
+
+		// Logical Operators
+		function showLogical() {
+			// to display the old text
+			let andString = '(a <= b) && (a >= b)';
+			let orString = '(a != b) || (a == b)';
+
+			// to display the result
+			let andResult = (a <= b) && (a >= b);
+			let orResult = (a != b) || (a == b);
+
+			document.getElementById('and').innerHTML = andString + ':' + ' ' + '<b style="color: var(--secondary)">' + andResult + '</b>';
+			document.getElementById('or').innerHTML = orString + ':' + ' ' + '<b style="color: var(--secondary)">' + orResult + '</b>';
+		}
+	</script>
+</body>
+</html>

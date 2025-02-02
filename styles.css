@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+	/* realtimecolors.com */
+	--text: rgb(238, 228, 225);
+	--background: rgb(34, 34, 34);
+	--primary: rgb(197, 175, 169);
+	--secondary: rgb(103, 74, 65);
+	--accent: rgb(161, 112, 97);
+
+
+	--white: rgb(255, 255, 255);
+	--red: rgb(255, 96, 92);
+	--yellow: rgb(255, 189, 68);
+	--green: rgb(0, 202, 78);
+}
+  
+/* ELEMENT */
+body {
+	/* vertically aligns website to center */
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	min-height: 100vh;
+
+	margin: 0;
+	padding: 0;
+	background-color: var(--background);
+	font-family: 'Nunito';	
+}
+
+h1 {
+	font-size: 200% !important;
+	font-weight: 800 !important;
+	color: var(--secondary) !important;
+}
+
+ol {
+	margin: 0;
+	font-size: 125%;
+	font-weight: 350;
+}
+
+ol li::marker {
+	font-weight: 550;
+	color: var(--secondary);
+}
+
+a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+/* ID */
+#header {
+	font-size: 300% !important;
+	font-weight: 900 !important;
+	color: var(--text) !important;
+}
+
+#footer {
+	margin: 0;
+	font-weight: 900 !important;
+	color: var(--text) !important;
+}
+
+/* CLASS */
+.card {
+	margin: 0 auto;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	background-color: var(--white);
+}
+
+.card-header, .card-footer {
+	border: none;
+	background-color: var(--white);
+}
+
+.card-footer {
+	margin: 0 auto;
+}
+
+.circle {
+	padding: 0 3.75px;
+}
+   
+.box {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+}
+
+.red {
+	background-color: var(--red);
+}
+
+.yellow {
+	background-color: var(--yellow);
+}
+
+.green {
+	background-color: var(--green);
+}
+
+.btn {
+	border-color: var(--primary);
+	border-radius: 8px;
+	background-color: rgb(103, 74, 65);
+	font-size: 130% !important;
+	text-shadow: 0 0 10px var(--primary);
+	color: var(--white);
+}
+
+.btn:hover, .btn:active {
+	border-color: var(--primary) !important;
+	border-radius: 8px;
+	background-color: rgba(103, 74, 65, 0.75) !important;
+	font-size: 130% !important;
+	text-shadow: 0 0 10px var(--primary);
+	color: var(--white);
+}
